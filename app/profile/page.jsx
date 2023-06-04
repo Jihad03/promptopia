@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
-import MyProfile from '@components/MyProfile';
+import MyProfile from '@components/Profile';
 
 const page = () => {
     const {data:session} = useSession();
 
-    const [posts, setPosts] = useState()
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
         const fetchPosts = async () => {
